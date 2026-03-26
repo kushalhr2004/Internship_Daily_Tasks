@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add Feedback</h1>
+
+<div class="box">
+    {% if success %}
+        <p style="color: green; font-weight: bold;">Feedback stored successfully!</p>
+        <p><a href="/add">Submit another feedback</a></p>
+    {% else %}
+        <form method="POST" action="/add">
+            <label>Name:</label><br>
+            <input type="text" name="name" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Message:</label><br>
+            <textarea name="message" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+</div>
+
+{% endblock %}

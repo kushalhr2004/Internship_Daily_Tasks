@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+header {
+    background: #222;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Hover underline effect */
+header a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00ffcc;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+header a:hover::after {
+    width: 100%;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Paragraph */
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Card Box */
+.box {
+    background: #f9f9f9;
+    border-left: 6px solid #28a745;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Hover lift effect */
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Box title */
+.box h2 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+/* List */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 17px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
